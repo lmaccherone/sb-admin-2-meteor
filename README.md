@@ -5,7 +5,8 @@ on the original see http://startbootstrap.com
 
 Features:
 
-  * Uses Iron Router (iron:router) for client-side routing
+  * CoffeeScript, Jade, and LESS (only slightly modified from the one provided by startbootstrap.com).
+  * Uses Iron Router (iron:router) for client-side routing.
   * Left side navigation is dynamically generated and routing is automatically created from a single specificaiton
     in routes.coffee. No `<ul>` and `<li>` tags. Just list the menu items. Second level menu is created by adding a
     child menu item and specifying it's parent name. Simple.
