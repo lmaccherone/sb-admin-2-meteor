@@ -7,7 +7,9 @@ Features:
 
   * Uses Iron Router (iron:router) for client-side routing
   * Left side navigation is dynamically generated and routing is automatically created from a single specificaiton
-    in routes.coffee. This allows you to
+    in routes.coffee. No <ul> and <li> tags. Just list the menu items. Second level menu is created by adding a
+    child menu item and specifying it's parent name. Simple.
+  * Redirects and missing routes supported.
   * Only dependency is roughly 70 lines of JavaScript and 60 lines of CSS for metisMenu jQuery plugin. All of this code
     is included in this repository under plugins and loads correctly by Meteor.
   * Requires other dependencies are few meteor packages. Run `meteor list` to duplicate.
