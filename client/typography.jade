@@ -1,0 +1,197 @@
+template(name="typography")
+  #page-wrapper
+    .row
+      .col-lg-12
+        h1.page-header Typography
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            | Headings
+          .panel-body
+            h1
+              | Heading 1
+              small Sub-heading
+            h2
+              | Heading 2
+              small Sub-heading
+            h3
+              | Heading 3
+              small Sub-heading
+            h4
+              | Heading 4
+              small Sub-heading
+            h5
+              | Heading 5
+              small Sub-heading
+            h6
+              | Heading 6
+              small Sub-heading
+          // /.panel-body
+        // /.panel
+      // /.col-lg-4
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            | Paragraphs
+          .panel-body
+            p.lead This is an example of lead body copy.
+            p
+              | This is an example of standard paragraph text. This is an example of
+              a(href="#") link anchor text
+              | within body copy.
+            p
+              small This is an example of small, fine print text.
+            p
+              strong This is an example of strong, bold text.
+            p
+              em This is an example of emphasized, italic text.
+            br
+            h4 Alignment Helpers
+            p.text-left Left aligned text.
+            p.text-center Center aligned text.
+            p.text-right Right aligned text.
+          // /.panel-body
+        // /.panel
+      // /.col-lg-4
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            | Emphasis Classes
+          .panel-body
+            p.text-muted This is an example of muted text.
+            p.text-primary This is an example of primary text.
+            p.text-success This is an example of success text.
+            p.text-info This is an example of info text.
+            p.text-warning This is an example of warning text.
+            p.text-danger This is an example of danger text.
+          // /.panel-body
+        // /.panel
+      // /.col-lg-4
+    // /.row
+    .row
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            | Abbreviations
+          .panel-body
+            p
+              | The abbreviation of the word attribute is
+              abbr(title="attribute") attr
+              | .
+            p
+              abbr.initialism(title="HyperText Markup Language") HTML
+              | is an abbreviation for a programming language.
+            br
+            h4 Addresses
+            address
+              strong Twitter, Inc.
+              br
+              | 795 Folsom Ave, Suite 600
+              br
+              | San Francisco, CA 94107
+              br
+              abbr(title="Phone") P:
+              | (123) 456-7890
+            address
+              strong Full Name
+              br
+              a(href="mailto:#") first.last@example.com
+          // /.panel-body
+        // /.panel
+      // /.col-lg-4
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            | Blockquotes
+          .panel-body
+            h4 Default Blockquote
+            blockquote
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            h4 Blockquote with Citation
+            blockquote
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+              small
+                | Someone famous in
+                cite(title="Source Title") Source Title
+            h4 Right Aligned Blockquote
+            blockquote.pull-right
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          // /.panel-body
+        // /.panel
+      // /.col-lg-4
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            | Lists
+          .panel-body
+            h4 Unordered List
+            ul
+              li List Item
+              li List Item
+              li
+                ul
+                  li List Item
+                  li List Item
+                  li List Item
+              li List Item
+            h4 Ordered List
+            ol
+              li List Item
+              li List Item
+              li List Item
+            h4 Unstyled List
+            ul.list-unstyled
+              li List Item
+              li List Item
+              li List Item
+            h4 Inline List
+            ul.list-inline
+              li List Item
+              li List Item
+              li List Item
+          // /.panel-body
+        // /.panel
+      // /.col-lg-4
+    // /.row
+    .row
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            | Description Lists
+          .panel-body
+            dl
+              dt Standard Description List
+              dd Description Text
+              dt Description List Title
+              dd Description List Text
+            dl.dl-horizontal
+              dt Horizontal Description List
+              dd Description Text
+              dt Description List Title
+              dd Description List Text
+          // /.panel-body
+        // /.panel
+      // /.col-lg-4
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            | Code
+          .panel-body
+            p
+              | This is an example of an inline code element within body copy. Wrap inline code within a
+              code &#60;code&#62;...&#60;/code&#62;
+              | tag.
+            pre.
+              \nThis is an example of preformatted text.
+          // /.panel-body
+        // /.panel
+      // /.col-lg-4
+    // /.row
+  // /#page-wrapper
+

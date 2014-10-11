@@ -1,0 +1,120 @@
+template(name="notifications")
+  #page-wrapper
+    .row
+      .col-lg-12
+        h1.page-header Notifications
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-6
+        .panel.panel-default
+          .panel-heading
+            | Alert Styles
+          // /.panel-heading
+          .panel-body
+            .alert.alert-success
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.alert-link(href="#") Alert Link
+              | .
+            .alert.alert-info
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.alert-link(href="#") Alert Link
+              | .
+            .alert.alert-warning
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.alert-link(href="#") Alert Link
+              | .
+            .alert.alert-danger
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.alert-link(href="#") Alert Link
+              | .
+          // .panel-body
+        // /.panel
+      // /.col-lg-6
+      .col-lg-6
+        .panel.panel-default
+          .panel-heading
+            | Dismissable Alerts
+          // /.panel-heading
+          .panel-body
+            .alert.alert-success.alert-dismissable
+              button.close(type="button", data-dismiss="alert", aria-hidden="true") &#215;
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.alert-link(href="#") Alert Link
+              | .
+            .alert.alert-info.alert-dismissable
+              button.close(type="button", data-dismiss="alert", aria-hidden="true") &#215;
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.alert-link(href="#") Alert Link
+              | .
+            .alert.alert-warning.alert-dismissable
+              button.close(type="button", data-dismiss="alert", aria-hidden="true") &#215;
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.alert-link(href="#") Alert Link
+              | .
+            .alert.alert-danger.alert-dismissable
+              button.close(type="button", data-dismiss="alert", aria-hidden="true") &#215;
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.alert-link(href="#") Alert Link
+              | .
+          // .panel-body
+        // /.panel
+      // /.col-lg-6
+    // /.row
+    .row
+      .col-lg-6
+        .panel.panel-default
+          .panel-heading
+            | Modals
+          // /.panel-heading
+          .panel-body
+            // Button trigger modal
+            button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal")
+              | Launch Demo Modal
+            // Modal
+            #myModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    button.close(type="button", data-dismiss="modal", aria-hidden="true") &#215;
+                    h4#myModalLabel.modal-title Modal title
+                  .modal-body
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  .modal-footer
+                    button.btn.btn-default(type="button", data-dismiss="modal") Close
+                    button.btn.btn-primary(type="button") Save changes
+                // /.modal-content
+              // /.modal-dialog
+            // /.modal
+          // .panel-body
+        // /.panel
+      // /.col-lg-6
+      .col-lg-6
+        .panel.panel-default
+          .panel-heading
+            | Tooltips and Popovers (NOT WORKING - LM 2014-10-10)
+          // /.panel-heading
+          .panel-body
+            h4 Tooltip Demo
+            .tooltip-demo
+              button.btn.btn-default(type="button", data-toggle="tooltip", data-placement="left", title="Tooltip on left") Tooltip on left
+              button.btn.btn-default(type="button", data-toggle="tooltip", data-placement="top", title="Tooltip on top") Tooltip on top
+              button.btn.btn-default(type="button", data-toggle="tooltip", data-placement="bottom", title="Tooltip on bottom") Tooltip on bottom
+              button.btn.btn-default(type="button", data-toggle="tooltip", data-placement="right", title="Tooltip on right") Tooltip on right
+            br
+            h4 Clickable Popover Demo
+            .tooltip-demo
+              button.btn.btn-default(type="button", data-container="body", data-toggle="popover", data-placement="left", data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.")
+                | Popover on left
+              button.btn.btn-default(type="button", data-container="body", data-toggle="popover", data-placement="top", data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.")
+                | Popover on top
+              button.btn.btn-default(type="button", data-container="body", data-toggle="popover", data-placement="bottom", data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.")
+                | Popover on bottom
+              button.btn.btn-default(type="button", data-container="body", data-toggle="popover", data-placement="right", data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.")
+                | Popover on right
+          // .panel-body
+        // /.panel
+      // /.col-lg-6
+    // /.row
+  // /#page-wrapper
+

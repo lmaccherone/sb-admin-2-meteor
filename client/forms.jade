@@ -1,0 +1,157 @@
+template(name="forms")
+  #page-wrapper
+    .row
+      .col-lg-12
+        h1.page-header Forms
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-heading
+            | Basic Form Elements
+          .panel-body
+            .row
+              .col-lg-6
+                form(role="form")
+                  .form-group
+                    label Text Input
+                    input.form-control(type="text")
+                    p.help-block Example block-level help text here.
+                  .form-group
+                    label Text Input with Placeholder
+                    input.form-control(type="text", placeholder="Enter text")
+                  .form-group
+                    label Static Control
+                    p.form-control-static email@example.com
+                  .form-group
+                    label File input
+                    input(type="file")
+                  .form-group
+                    label Text area
+                    textarea.form-control(rows="3")
+                  .form-group
+                    label Checkboxes
+                    .checkbox
+                      label
+                        input(type="checkbox", value="")
+                        | Checkbox 1
+                    .checkbox
+                      label
+                        input(type="checkbox", value="")
+                        | Checkbox 2
+                    .checkbox
+                      label
+                        input(type="checkbox", value="")
+                        | Checkbox 3
+                  .form-group
+                    label Inline Checkboxes
+                    label.checkbox-inline
+                      input(type="checkbox")
+                      | 1
+                    label.checkbox-inline
+                      input(type="checkbox")
+                      | 2
+                    label.checkbox-inline
+                      input(type="checkbox")
+                      | 3
+                  .form-group
+                    label Radio Buttons
+                    .radio
+                      label
+                        input#optionsRadios1(type="radio", name="optionsRadios", value="option1", checked="")
+                        | Radio 1
+                    .radio
+                      label
+                        input#optionsRadios2(type="radio", name="optionsRadios", value="option2")
+                        | Radio 2
+                    .radio
+                      label
+                        input#optionsRadios3(type="radio", name="optionsRadios", value="option3")
+                        | Radio 3
+                  .form-group
+                    label Inline Radio Buttons
+                    label.radio-inline
+                      input#optionsRadiosInline1(type="radio", name="optionsRadiosInline", value="option1", checked="")
+                      | 1
+                    label.radio-inline
+                      input#optionsRadiosInline2(type="radio", name="optionsRadiosInline", value="option2")
+                      | 2
+                    label.radio-inline
+                      input#optionsRadiosInline3(type="radio", name="optionsRadiosInline", value="option3")
+                      | 3
+                  .form-group
+                    label Selects
+                    select.form-control
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+                      option 5
+                  .form-group
+                    label Multiple Selects
+                    select.form-control(multiple="")
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+                      option 5
+                  button.btn.btn-default(type="submit") Submit Button
+                  button.btn.btn-default(type="reset") Reset Button
+              // /.col-lg-6 (nested)
+              .col-lg-6
+                h1 Disabled Form States
+                form(role="form")
+                  fieldset(disabled="")
+                    .form-group
+                      label(for="disabledSelect") Disabled input
+                      input#disabledInput.form-control(type="text", placeholder="Disabled input", disabled="")
+                    .form-group
+                      label(for="disabledSelect") Disabled select menu
+                      select#disabledSelect.form-control
+                        option Disabled select
+                    .checkbox
+                      label
+                        input(type="checkbox")
+                        | Disabled Checkbox
+                    button.btn.btn-primary(type="submit") Disabled Button
+                h1 Form Validation States
+                form(role="form")
+                  .form-group.has-success
+                    label.control-label(for="inputSuccess") Input with success
+                    input#inputSuccess.form-control(type="text")
+                  .form-group.has-warning
+                    label.control-label(for="inputWarning") Input with warning
+                    input#inputWarning.form-control(type="text")
+                  .form-group.has-error
+                    label.control-label(for="inputError") Input with error
+                    input#inputError.form-control(type="text")
+                h1 Input Groups
+                form(role="form")
+                  .form-group.input-group
+                    span.input-group-addon @
+                    input.form-control(type="text", placeholder="Username")
+                  .form-group.input-group
+                    input.form-control(type="text")
+                    span.input-group-addon .00
+                  .form-group.input-group
+                    span.input-group-addon
+                      i.fa.fa-eur
+                    input.form-control(type="text", placeholder="Font Awesome Icon")
+                  .form-group.input-group
+                    span.input-group-addon $
+                    input.form-control(type="text")
+                    span.input-group-addon .00
+                  .form-group.input-group
+                    input.form-control(type="text")
+                    span.input-group-btn
+                      button.btn.btn-default(type="button")
+                        i.fa.fa-search
+              // /.col-lg-6 (nested)
+            // /.row (nested)
+          // /.panel-body
+        // /.panel
+      // /.col-lg-12
+    // /.row
+  // /#page-wrapper
+

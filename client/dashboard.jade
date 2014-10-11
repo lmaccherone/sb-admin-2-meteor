@@ -1,0 +1,420 @@
+template(name="dashboard")
+
+  #page-wrapper
+    .row
+      .col-lg-12
+        h1.page-header Dashboard
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-3.col-md-6
+        .panel.panel-primary
+          .panel-heading
+            .row
+              .col-xs-3
+                i.fa.fa-comments.fa-5x
+              .col-xs-9.text-right
+                .huge 26
+                div New Comments!
+          a(href="#")
+            .panel-footer
+              span.pull-left View Details
+              span.pull-right
+                i.fa.fa-arrow-circle-right
+              .clearfix
+      .col-lg-3.col-md-6
+        .panel.panel-green
+          .panel-heading
+            .row
+              .col-xs-3
+                i.fa.fa-tasks.fa-5x
+              .col-xs-9.text-right
+                .huge 12
+                div New Tasks!
+          a(href="#")
+            .panel-footer
+              span.pull-left View Details
+              span.pull-right
+                i.fa.fa-arrow-circle-right
+              .clearfix
+      .col-lg-3.col-md-6
+        .panel.panel-yellow
+          .panel-heading
+            .row
+              .col-xs-3
+                i.fa.fa-shopping-cart.fa-5x
+              .col-xs-9.text-right
+                .huge 124
+                div New Orders!
+          a(href="#")
+            .panel-footer
+              span.pull-left View Details
+              span.pull-right
+                i.fa.fa-arrow-circle-right
+              .clearfix
+      .col-lg-3.col-md-6
+        .panel.panel-red
+          .panel-heading
+            .row
+              .col-xs-3
+                i.fa.fa-support.fa-5x
+              .col-xs-9.text-right
+                .huge 13
+                div Support Tickets!
+          a(href="#")
+            .panel-footer
+              span.pull-left View Details
+              span.pull-right
+                i.fa.fa-arrow-circle-right
+              .clearfix
+    // /.row
+    .row
+      .col-lg-8
+        .panel.panel-default
+          .panel-heading
+            i.fa.fa-bar-chart-o.fa-fw
+            | Area Chart Example
+            .pull-right
+              .btn-group
+                button.btn.btn-default.btn-xs.dropdown-toggle(type="button", data-toggle="dropdown")
+                  | Actions
+                  span.caret
+                ul.dropdown-menu.pull-right(role="menu")
+                  li
+                    a(href="#") Action
+                  li
+                    a(href="#") Another action
+                  li
+                    a(href="#") Something else here
+                  li.divider
+                  li
+                    a(href="#") Separated link
+          // /.panel-heading
+          .panel-body
+            #morris-area-chart
+          // /.panel-body
+        // /.panel
+        .panel.panel-default
+          .panel-heading
+            i.fa.fa-bar-chart-o.fa-fw
+            | Bar Chart Example
+            .pull-right
+              .btn-group
+                button.btn.btn-default.btn-xs.dropdown-toggle(type="button", data-toggle="dropdown")
+                  | Actions
+                  span.caret
+                ul.dropdown-menu.pull-right(role="menu")
+                  li
+                    a(href="#") Action
+                  li
+                    a(href="#") Another action
+                  li
+                    a(href="#") Something else here
+                  li.divider
+                  li
+                    a(href="#") Separated link
+          // /.panel-heading
+          .panel-body
+            .row
+              .col-lg-4
+                .table-responsive
+                  table.table.table-bordered.table-hover.table-striped
+                    thead
+                      tr
+                        th #
+                        th Date
+                        th Time
+                        th Amount
+                    tbody
+                      tr
+                        td 3326
+                        td 10/21/2013
+                        td 3:29 PM
+                        td $321.33
+                      tr
+                        td 3325
+                        td 10/21/2013
+                        td 3:20 PM
+                        td $234.34
+                      tr
+                        td 3324
+                        td 10/21/2013
+                        td 3:03 PM
+                        td $724.17
+                      tr
+                        td 3323
+                        td 10/21/2013
+                        td 3:00 PM
+                        td $23.71
+                      tr
+                        td 3322
+                        td 10/21/2013
+                        td 2:49 PM
+                        td $8345.23
+                      tr
+                        td 3321
+                        td 10/21/2013
+                        td 2:23 PM
+                        td $245.12
+                      tr
+                        td 3320
+                        td 10/21/2013
+                        td 2:15 PM
+                        td $5663.54
+                      tr
+                        td 3319
+                        td 10/21/2013
+                        td 2:13 PM
+                        td $943.45
+                // /.table-responsive
+              // /.col-lg-4 (nested)
+              .col-lg-8
+                #morris-bar-chart
+              // /.col-lg-8 (nested)
+            // /.row
+          // /.panel-body
+        // /.panel
+        .panel.panel-default
+          .panel-heading
+            i.fa.fa-clock-o.fa-fw
+            | Responsive Timeline
+          // /.panel-heading
+          .panel-body
+            ul.timeline
+              li
+                .timeline-badge
+                  i.fa.fa-check
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title Lorem ipsum dolor
+                    p
+                      small.text-muted
+                        i.fa.fa-clock-o
+                        | 11 hours ago via Twitter
+                  .timeline-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.
+              li.timeline-inverted
+                .timeline-badge.warning
+                  i.fa.fa-credit-card
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title Lorem ipsum dolor
+                  .timeline-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.
+              li
+                .timeline-badge.danger
+                  i.fa.fa-bomb
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title Lorem ipsum dolor
+                  .timeline-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.
+              li.timeline-inverted
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title Lorem ipsum dolor
+                  .timeline-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias sapiente rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut debitis!
+              li
+                .timeline-badge.info
+                  i.fa.fa-save
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title Lorem ipsum dolor
+                  .timeline-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.
+                    hr
+                    .btn-group
+                      button.btn.btn-primary.btn-sm.dropdown-toggle(type="button", data-toggle="dropdown")
+                        i.fa.fa-gear
+                        span.caret
+                      ul.dropdown-menu(role="menu")
+                        li
+                          a(href="#") Action
+                        li
+                          a(href="#") Another action
+                        li
+                          a(href="#") Something else here
+                        li.divider
+                        li
+                          a(href="#") Separated link
+              li
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title Lorem ipsum dolor
+                  .timeline-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.
+              li.timeline-inverted
+                .timeline-badge.success
+                  i.fa.fa-graduation-cap
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title Lorem ipsum dolor
+                  .timeline-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.
+          // /.panel-body
+        // /.panel
+      // /.col-lg-8
+      .col-lg-4
+        .panel.panel-default
+          .panel-heading
+            i.fa.fa-bell.fa-fw
+            | Notifications Panel
+          // /.panel-heading
+          .panel-body
+            .list-group
+              a.list-group-item(href="#")
+                i.fa.fa-comment.fa-fw
+                | New Comment
+                span.pull-right.text-muted.small
+                  em 4 minutes ago
+              a.list-group-item(href="#")
+                i.fa.fa-twitter.fa-fw
+                | 3 New Followers
+                span.pull-right.text-muted.small
+                  em 12 minutes ago
+              a.list-group-item(href="#")
+                i.fa.fa-envelope.fa-fw
+                | Message Sent
+                span.pull-right.text-muted.small
+                  em 27 minutes ago
+              a.list-group-item(href="#")
+                i.fa.fa-tasks.fa-fw
+                | New Task
+                span.pull-right.text-muted.small
+                  em 43 minutes ago
+              a.list-group-item(href="#")
+                i.fa.fa-upload.fa-fw
+                | Server Rebooted
+                span.pull-right.text-muted.small
+                  em 11:32 AM
+              a.list-group-item(href="#")
+                i.fa.fa-bolt.fa-fw
+                | Server Crashed!
+                span.pull-right.text-muted.small
+                  em 11:13 AM
+              a.list-group-item(href="#")
+                i.fa.fa-warning.fa-fw
+                | Server Not Responding
+                span.pull-right.text-muted.small
+                  em 10:57 AM
+              a.list-group-item(href="#")
+                i.fa.fa-shopping-cart.fa-fw
+                | New Order Placed
+                span.pull-right.text-muted.small
+                  em 9:49 AM
+              a.list-group-item(href="#")
+                i.fa.fa-money.fa-fw
+                | Payment Received
+                span.pull-right.text-muted.small
+                  em Yesterday
+            // /.list-group
+            a.btn.btn-default.btn-block(href="#") View All Alerts
+          // /.panel-body
+        // /.panel
+        .panel.panel-default
+          .panel-heading
+            i.fa.fa-bar-chart-o.fa-fw
+            | Donut Chart Example
+          .panel-body
+            #morris-donut-chart
+            a.btn.btn-default.btn-block(href="#") View Details
+          // /.panel-body
+        // /.panel
+        .chat-panel.panel.panel-default
+          .panel-heading
+            i.fa.fa-comments.fa-fw
+            | Chat
+            .btn-group.pull-right
+              button.btn.btn-default.btn-xs.dropdown-toggle(type="button", data-toggle="dropdown")
+                i.fa.fa-chevron-down
+              ul.dropdown-menu.slidedown
+                li
+                  a(href="#")
+                    i.fa.fa-refresh.fa-fw
+                    | Refresh
+                li
+                  a(href="#")
+                    i.fa.fa-check-circle.fa-fw
+                    | Available
+                li
+                  a(href="#")
+                    i.fa.fa-times.fa-fw
+                    | Busy
+                li
+                  a(href="#")
+                    i.fa.fa-clock-o.fa-fw
+                    | Away
+                li.divider
+                li
+                  a(href="#")
+                    i.fa.fa-sign-out.fa-fw
+                    | Sign Out
+          // /.panel-heading
+          .panel-body
+            ul.chat
+              li.left.clearfix
+                span.chat-img.pull-left
+                  img.img-circle(src="http://placehold.it/50/55C1E7/fff", alt="User Avatar")
+                .chat-body.clearfix
+                  .header
+                    strong.primary-font Jack Sparrow
+                    small.pull-right.text-muted
+                      i.fa.fa-clock-o.fa-fw
+                      | 12 mins ago
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+              li.right.clearfix
+                span.chat-img.pull-right
+                  img.img-circle(src="http://placehold.it/50/FA6F57/fff", alt="User Avatar")
+                .chat-body.clearfix
+                  .header
+                    small.text-muted
+                      i.fa.fa-clock-o.fa-fw
+                      | 13 mins ago
+                    strong.pull-right.primary-font Bhaumik Patel
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+              li.left.clearfix
+                span.chat-img.pull-left
+                  img.img-circle(src="http://placehold.it/50/55C1E7/fff", alt="User Avatar")
+                .chat-body.clearfix
+                  .header
+                    strong.primary-font Jack Sparrow
+                    small.pull-right.text-muted
+                      i.fa.fa-clock-o.fa-fw
+                      | 14 mins ago
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+              li.right.clearfix
+                span.chat-img.pull-right
+                  img.img-circle(src="http://placehold.it/50/FA6F57/fff", alt="User Avatar")
+                .chat-body.clearfix
+                  .header
+                    small.text-muted
+                      i.fa.fa-clock-o.fa-fw
+                      | 15 mins ago
+                    strong.pull-right.primary-font Bhaumik Patel
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+          // /.panel-body
+          .panel-footer
+            .input-group
+              input#btn-input.form-control.input-sm(type="text", placeholder="Type your message here...")
+              span.input-group-btn
+                button#btn-chat.btn.btn-warning.btn-sm
+                  | Send
+          // /.panel-footer
+        // /.panel .chat-panel
+      // /.col-lg-4
+    // /.row
+  // /#page-wrapper

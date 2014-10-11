@@ -1,0 +1,248 @@
+template(name="grid")
+  #page-wrapper
+    .row
+      .col-lg-12
+        h1.page-header Grid
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-body
+            h3 Grid options
+            p
+              | See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+            .table-responsive
+              table.table.table-bordered.table-striped
+                thead
+                  tr
+                    th
+                    th
+                      | Extra small devices
+                      small Phones (&#60;768px)
+                    th
+                      | Small devices
+                      small Tablets (&#8805;768px)
+                    th
+                      | Medium devices
+                      small Desktops (&#8805;992px)
+                    th
+                      | Large devices
+                      small Desktops (&#8805;1200px)
+                tbody
+                  tr
+                    th Grid behavior
+                    td Horizontal at all times
+                    td(colspan="3") Collapsed to start, horizontal above breakpoints
+                  tr
+                    th Max container width
+                    td None (auto)
+                    td 750px
+                    td 970px
+                    td 1170px
+                  tr
+                    th Class prefix
+                    td
+                      code .col-xs-
+                    td
+                      code .col-sm-
+                    td
+                      code .col-md-
+                    td
+                      code .col-lg-
+                  tr
+                    th # of columns
+                    td(colspan="4") 12
+                  tr
+                    th Max column width
+                    td.text-muted Auto
+                    td 60px
+                    td 78px
+                    td 95px
+                  tr
+                    th Gutter width
+                    td(colspan="4") 30px (15px on each side of a column)
+                  tr
+                    th Nestable
+                    td(colspan="4") Yes
+                  tr
+                    th Offsets
+                    td(colspan="4") Yes
+                  tr
+                    th Column ordering
+                    td(colspan="4") Yes
+            p
+              | Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, applying any
+              code .col-md-
+              | class to an element will not only affect its styling on medium devices but also on large devices if a
+              code .col-lg-
+              | class is not present.
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-body
+            h3 Example: Stacked-to-horizontal
+            p
+              | Using a single set of
+              code .col-md-*
+              | grid classes, you can create a default grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any
+              code .row
+              | .
+            .row.show-grid
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+              .col-md-1 .col-md-1
+            .row.show-grid
+              .col-md-8 .col-md-8
+              .col-md-4 .col-md-4
+            .row.show-grid
+              .col-md-4 .col-md-4
+              .col-md-4 .col-md-4
+              .col-md-4 .col-md-4
+            .row.show-grid
+              .col-md-6 .col-md-6
+              .col-md-6 .col-md-6
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-body
+            h3 Example: Mobile and desktop
+            p
+              | Don"t want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding
+              code .col-xs-*
+              code .col-md-*
+              | to your columns. See the example below for a better idea of how it all works.
+            .row.show-grid
+              .col-xs-12.col-md-8 .col-xs-12 .col-md-8
+              .col-xs-6.col-md-4 .col-xs-6 .col-md-4
+            .row.show-grid
+              .col-xs-6.col-md-4 .col-xs-6 .col-md-4
+              .col-xs-6.col-md-4 .col-xs-6 .col-md-4
+              .col-xs-6.col-md-4 .col-xs-6 .col-md-4
+            .row.show-grid
+              .col-xs-6 .col-xs-6
+              .col-xs-6 .col-xs-6
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-body
+            h3 Example: Mobile, tablet, desktops
+            p
+              | Build on the previous example by creating even more dynamic and powerful layouts with tablet
+              code .col-sm-*
+              | classes.
+            .row.show-grid
+              .col-xs-12.col-sm-6.col-md-8 .col-xs-12 .col-sm-6 .col-md-8
+              .col-xs-6.col-md-4 .col-xs-6 .col-md-4
+            .row.show-grid
+              .col-xs-6.col-sm-4 .col-xs-6 .col-sm-4
+              .col-xs-6.col-sm-4 .col-xs-6 .col-sm-4
+              // Optional: clear the XS cols if their content doesn't match in height
+              .clearfix.visible-xs
+              .col-xs-6.col-sm-4 .col-xs-6 .col-sm-4
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-body
+            h3#grid-responsive-resets Responsive column resets
+            p
+              | With the four tiers of grids available you"re bound to run into issues where, at certain breakpoints, your columns don"t clear quite right as one is taller than the other. To fix that, use a combination of a
+              code .clearfix
+              | and our
+              a(href="#responsive-utilities") responsive utility classes
+              | .
+            .row.show-grid
+              .col-xs-6.col-sm-3
+                | .col-xs-6 .col-sm-3
+                br
+                | Resize your viewport or check it out on your phone for an example.
+              .col-xs-6.col-sm-3 .col-xs-6 .col-sm-3
+              // Add the extra clearfix for only the required viewport
+              .clearfix.visible-xs
+              .col-xs-6.col-sm-3 .col-xs-6 .col-sm-3
+              .col-xs-6.col-sm-3 .col-xs-6 .col-sm-3
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-body
+            h3#grid-offsetting Offsetting columns
+            p
+              | Move columns to the right using
+              code .col-md-offset-*
+              | classes. These classes increase the left margin of a column by
+              code *
+              | columns. For example,
+              code .col-md-offset-4
+              | moves
+              code .col-md-4
+              | over four columns.
+            .row.show-grid
+              .col-md-4 .col-md-4
+              .col-md-4.col-md-offset-4 .col-md-4 .col-md-offset-4
+            .row.show-grid
+              .col-md-3.col-md-offset-3 .col-md-3 .col-md-offset-3
+              .col-md-3.col-md-offset-3 .col-md-3 .col-md-offset-3
+            .row.show-grid
+              .col-md-6.col-md-offset-3 .col-md-6 .col-md-offset-3
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-body
+            h3#grid-nesting Nesting columns
+            p
+              | To nest your content with the default grid, add a new
+              code .row
+              | and set of
+              code .col-md-*
+              | columns within an existing
+              code .col-md-*
+              | column. Nested rows should include a set of columns that add up to 12.
+            .row.show-grid
+              .col-md-9
+                | Level 1: .col-md-9
+                .row.show-grid
+                  .col-md-6
+                    | Level 2: .col-md-6
+                  .col-md-6
+                    | Level 2: .col-md-6
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-body
+            h3#grid-column-ordering Column ordering
+            p
+              | Easily change the order of our built-in grid columns with
+              code .col-md-push-*
+              | and
+              code .col-md-pull-*
+              | modifier classes.
+            .row.show-grid
+              .col-md-9.col-md-push-3 .col-md-9 .col-md-push-3
+              .col-md-3.col-md-pull-9 .col-md-3 .col-md-pull-9
+      // /.col-lg-12
+    // /.row
+  // /#page-wrapper
+
