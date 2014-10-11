@@ -18,6 +18,7 @@ Features:
 
 Not done (yet?)
 
+  * Meteor login support.
   * Need to setup a demo server on meteor.com.
   * Tooltips. I think it's some missing CSS. Maybe the Bootstrap 3 package for Meteor is missing something? I would
     appreciate a pull request to fix this. It might just be the .popover classes?
