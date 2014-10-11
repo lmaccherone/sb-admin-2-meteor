@@ -23,7 +23,6 @@ Not done (yet?)
   * Tooltips. I think it's some missing CSS. Maybe the Bootstrap 3 package for Meteor is missing something? I would
     appreciate a pull request to fix this. It might just be the .popover classes?
   * Need to templatize the topbar navigation.
-  * Need more tweaks to dark theme.
   * Could use another theme or two.
   * Would be nice to have a theme switcher.
   * Charts. My main effort after this is to add my own visualizations so I may never support the Morris and Flot charts
