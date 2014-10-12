@@ -13,13 +13,12 @@ navRoutes = [
   new NavRoute('panels-and-wells', '', {parentName: 'ui-elements', label: 'Panels and Wells'})
   new NavRoute('pages', 'fa-files-o', {label: "Sample Pages"})
   new NavRoute('blank', '', {parentName: 'pages', label: "Blank Page"})
-  new NavRoute('login', '', {parentName: 'pages'})
+  new NavRoute('login-ref', '', {redirect: 'login', parentName: 'pages', template: 'login', layoutTemplate: 'loginLayout'})
+  new NavRoute('login', '', {isMainNav: false, layoutTemplate: 'loginLayout'})
+  new NavRoute('', '', {isMainNav: false, redirect: 'dashboard'})
+  new NavRoute('index', '', {isMainNav: false, redirect: 'dashboard'})
 ]
 
-redirects = [
-  {from: ['/', '/index'], to: '/dashboard'}
-]
+navRouteList = new NavRouteList(navRoutes)
 
-navRouteList = new NavRouteList(navRoutes, redirects)
-
-Session.set('navRoots', navRouteList.rootRoutes)
+Session.set('navRoots', navRouteList.rootNavRoutes)

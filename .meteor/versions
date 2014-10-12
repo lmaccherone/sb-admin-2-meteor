@@ -1,3 +1,9 @@
+accounts-base@1.1.1
+accounts-github@1.0.1
+accounts-oauth@1.1.1
+accounts-password@1.0.2
+accounts-ui-unstyled@1.1.2
+accounts-ui@1.1.1
 application-configuration@1.0.2
 autopublish@1.0.0
 autoupdate@1.1.1
@@ -14,9 +20,11 @@ ctl@1.0.1
 ddp@1.0.9
 deps@1.0.4
 ejson@1.0.3
+email@1.0.3
 fastclick@1.0.0
 follower-livedata@1.0.1
 geojson-utils@1.0.0
+github@1.1.0
 html-tools@1.0.1
 htmljs@1.0.1
 http@1.0.6
@@ -31,6 +39,7 @@ json@1.0.0
 less@1.0.9
 linto:fontawesome@1.0.1
 livedata@1.0.10
+localstorage@1.0.0
 logging@1.0.3
 meteor-platform@1.1.1
 meteor@1.1.1
@@ -40,6 +49,9 @@ mizzao:bootstrap-3@3.2.0_1
 mobile-status-bar@1.0.0
 mongo@1.0.6
 mquandalle:jade@0.2.8
+npm-bcrypt@0.7.7
+oauth2@1.1.0
+oauth@1.1.0
 observe-sequence@1.0.2
 ordered-dict@1.0.0
 random@1.0.0
@@ -48,9 +60,12 @@ reactive-var@1.0.2
 reload@1.1.0
 retry@1.0.0
 routepolicy@1.0.1
+service-configuration@1.0.1
 session@1.0.2
+sha@1.0.0
 spacebars-compiler@1.0.2
 spacebars@1.0.2
+srp@1.0.0
 templating@1.0.7
 tracker@1.0.2
 ui@1.0.3
