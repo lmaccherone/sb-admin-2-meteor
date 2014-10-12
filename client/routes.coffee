@@ -22,4 +22,4 @@ redirects = [
 
 navRouteList = new NavRouteList(navRoutes, redirects)
 
-this.navRouteList = navRouteList
+Session.set('navRoots', navRouteList.rootRoutes)

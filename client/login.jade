@@ -1,0 +1,40 @@
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  meta(name="description", content="")
+  meta(name="author", content="")
+  title SB Admin 2 Meteor
+
+template(name="loginLayout")
+  +head
+  body
+    .container
+      .row
+        .col-md-4.col-md-offset-4
+          .login-panel.panel.panel-default
+            .panel-heading
+              h3.panel-title Please Sign In
+            .panel-body
+              form(role="form")
+                fieldset
+                  .form-group
+                    input.form-control(type="email", placeholder="E-mail", name="email", autofocus="")
+                  .form-group
+                    input.form-control(type="password", placeholder="Password", name="password", value="")
+                  .checkbox
+                    label
+                      input(type="checkbox", name="remember", value="Remember Me")
+                      | Remember Me
+                  // Change this to a button or input when using this as a form
+                  a.btn.btn-lg.btn-success.btn-block(href="index.html") Login
+    // jQuery Version 1.11.0
+    script(src="js/jquery-1.11.0.js")
+    // Bootstrap Core JavaScript
+    script(src="js/bootstrap.min.js")
+    // Metis Menu Plugin JavaScript
+    script(src="js/plugins/metisMenu/metisMenu.min.js")
+    // Custom Theme JavaScript
+    script(src="js/sb-admin-2.js")
+
+  +yield

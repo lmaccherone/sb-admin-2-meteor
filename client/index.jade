@@ -1,31 +1,16 @@
-head
-  meta(charset="utf-8")
-  meta(http-equiv="X-UA-Compatible", content="IE=edge")
-  meta(name="viewport", content="width=device-width, initial-scale=1")
-  meta(name="description", content="")
-  meta(name="author", content="")
-  title SB Admin 2 Meteor
-  //// Bootstrap Core CSS
-  //link(href="css/bootstrap.min.css", rel="stylesheet")
-  //// MetisMenu CSS
-  //link(href="css/plugins/metisMenu/metisMenu.min.css", rel="stylesheet")
-  //// Timeline CSS
-  //link(href="css/plugins/timeline.css", rel="stylesheet")
-  //// Custom CSS
-  //link(href="css/sb-admin-2.css", rel="stylesheet")
-  //// Morris Charts CSS
-  //link(href="css/plugins/morris.css", rel="stylesheet")
-  //// Custom Fonts
-  //link(href="font-awesome-4.1.0/css/font-awesome.min.css", rel="stylesheet", type="text/css")
-  //// HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-  //// WARNING: Respond.js doesn't work if you view the page via file://
-  ////if lt IE 9
-  //  script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
-  //  script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
-
 template(name="mainLayout")
+  +head
   +topBar
   +container
+
+template(name="head")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    title SB Admin 2 Meteor
 
 template(name="topBar")
   #wrapper
@@ -45,33 +30,9 @@ template(name="topBar")
             i.fa.fa-envelope.fa-fw
             i.fa.fa-caret-down
           ul.dropdown-menu.dropdown-messages
-            li
-              a(href="#")
-                div
-                  strong John Smith
-                  span.pull-right.text-muted
-                    em Yesterday
-                div
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
-            li.divider
-            li
-              a(href="#")
-                div
-                  strong John Smith
-                  span.pull-right.text-muted
-                    em Yesterday
-                div
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
-            li.divider
-            li
-              a(href="#")
-                div
-                  strong John Smith
-                  span.pull-right.text-muted
-                    em Yesterday
-                div
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
-            li.divider
+            +emailDropdownElement(href="#" name="John Smith" when="Yesterday" summary="Lorem ipsum dolor sit amet, consectetur...")
+            +emailDropdownElement(href="#" name="John Smith" when="Yesterday" summary="Lorem ipsum dolor sit amet, consectetur...")
+            +emailDropdownElement(href="#" name="John Smith" when="Yesterday" summary="Lorem ipsum dolor sit amet, consectetur...")
             li
               a.text-center(href="#")
                 strong Read All Messages
@@ -83,46 +44,11 @@ template(name="topBar")
             i.fa.fa-tasks.fa-fw
             i.fa.fa-caret-down
           ul.dropdown-menu.dropdown-tasks
-            li
-              a(href="#")
-                div
-                  p
-                    strong Task 1
-                    span.pull-right.text-muted 40% Complete
-                  .progress.progress-striped.active
-                    .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="40", aria-valuemin="0", aria-valuemax="100", style="width: 40%")
-                      span.sr-only 40% Complete (success)
-            li.divider
-            li
-              a(href="#")
-                div
-                  p
-                    strong Task 2
-                    span.pull-right.text-muted 20% Complete
-                  .progress.progress-striped.active
-                    .progress-bar.progress-bar-info(role="progressbar", aria-valuenow="20", aria-valuemin="0", aria-valuemax="100", style="width: 20%")
-                      span.sr-only 20% Complete
-            li.divider
-            li
-              a(href="#")
-                div
-                  p
-                    strong Task 3
-                    span.pull-right.text-muted 60% Complete
-                  .progress.progress-striped.active
-                    .progress-bar.progress-bar-warning(role="progressbar", aria-valuenow="60", aria-valuemin="0", aria-valuemax="100", style="width: 60%")
-                      span.sr-only 60% Complete (warning)
-            li.divider
-            li
-              a(href="#")
-                div
-                  p
-                    strong Task 4
-                    span.pull-right.text-muted 80% Complete
-                  .progress.progress-striped.active
-                    .progress-bar.progress-bar-danger(role="progressbar", aria-valuenow="80", aria-valuemin="0", aria-valuemax="100", style="width: 80%")
-                      span.sr-only 80% Complete (danger)
-            li.divider
+            +taskDropdownElement(href="#" task="Task 1" percentComplete=40 type="success")
+            +taskDropdownElement(href="#" task="Task 2" percentComplete=20 type="info")
+            +taskDropdownElement(href="#" task="Task 3" percentComplete=60 type="warning")
+            +taskDropdownElement(href="#" task="Task 4" percentComplete=80 type="danger")
+            +taskDropdownElement(href="#" task="Task 5" percentComplete=100 type="")
             li
               a.text-center(href="#")
                 strong See All Tasks
@@ -134,41 +60,11 @@ template(name="topBar")
             i.fa.fa-bell.fa-fw
             i.fa.fa-caret-down
           ul.dropdown-menu.dropdown-alerts
-            li
-              a(href="#")
-                div
-                  i.fa.fa-comment.fa-fw
-                  | New Comment
-                  span.pull-right.text-muted.small 4 minutes ago
-            li.divider
-            li
-              a(href="#")
-                div
-                  i.fa.fa-twitter.fa-fw
-                  | 3 New Followers
-                  span.pull-right.text-muted.small 12 minutes ago
-            li.divider
-            li
-              a(href="#")
-                div
-                  i.fa.fa-envelope.fa-fw
-                  | Message Sent
-                  span.pull-right.text-muted.small 4 minutes ago
-            li.divider
-            li
-              a(href="#")
-                div
-                  i.fa.fa-tasks.fa-fw
-                  | New Task
-                  span.pull-right.text-muted.small 4 minutes ago
-            li.divider
-            li
-              a(href="#")
-                div
-                  i.fa.fa-upload.fa-fw
-                  | Server Rebooted
-                  span.pull-right.text-muted.small 4 minutes ago
-            li.divider
+            +notificationsElement(href="#" icon="fa-comment" text="New Comment" when="4 minutes ago")
+            +notificationsElement(href="#" icon="fa-twitter" text="3 New Followers" when="12 minutes ago")
+            +notificationsElement(href="#" icon="fa-envelope" text="Message Sent" when="14 minutes ago")
+            +notificationsElement(href="#" icon="fa-tasks" text="New Task" when="14 minutes ago")
+            +notificationsElement(href="#" icon="fa-upload" text="Server Rebooted" when="14 minutes ago")
             li
               a.text-center(href="#")
                 strong See All Alerts
@@ -196,6 +92,38 @@ template(name="topBar")
           // /.dropdown-user
         // /.dropdown
       // /.navbar-top-links
+
+template(name="emailDropdownElement")
+  li
+    a(href=href)
+      div
+        strong #{name}
+        span.pull-right.text-muted
+          em #{when}
+      div
+        | #{summary}
+  li.divider
+
+template(name="taskDropdownElement")
+  li
+    a(href=href)
+      div
+        p
+          strong #{task}
+          span.pull-right.text-muted #{percentComplete}% Complete
+        .progress.progress-striped.active
+          .progress-bar(class=progressBarType role="progressbar", aria-valuenow=percentComplete, aria-valuemin="0", aria-valuemax="100", style=style)
+            span.sr-only #{percentComplete}% Complete (#{type})
+  li.divider
+
+template(name="notificationsElement")
+  li
+    a(href=href)
+      div
+        i.fa.fa-fw(class=icon)
+        | #{text}
+        span.pull-right.text-muted.small #{when}
+  li.divider
 
 template(name="container")
   +sidebar
@@ -227,7 +155,6 @@ template(name="navElement")
       ul.nav.nav-second-level
         each children
           +navElement
-
 
 template(name="page")
   // Put page title and breadcrumbs here with `Router.routes[Session.get('active')]`

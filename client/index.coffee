@@ -20,10 +20,16 @@ Template.sidebar.rendered = () ->
   $('#side-menu').metisMenu()
 
 Template.sidebar.navElements = () ->
-  return navRouteList.rootRoutes
+  return Session.get('navRoots')
 
 Template.navElement.isActive = () ->
   if this.name is Session.get('active')
     return "active"
   else
     return ""
+
+Template.taskDropdownElement.progressBarType = () ->
+  return "progress-bar-" + this.type
+
+Template.taskDropdownElement.style = () ->
+  return "width: " + this.percentComplete + "%"
