@@ -1,7 +1,8 @@
 template(name="mainLayout")
   +head
-  +topBar
+  +topbar
   +container
+  +loginModal
 
 template(name="head")
   head
@@ -12,7 +13,7 @@ template(name="head")
     meta(name="author", content="")
     title SB Admin 2 Meteor
 
-template(name="topBar")
+template(name="topbar")
   #wrapper
     // Navigation
     nav.navbar.navbar-default.navbar-static-top(role="navigation", style="margin-bottom: 0")
@@ -86,9 +87,13 @@ template(name="topBar")
                 | Settings
             li.divider
             li
-              a(href="/login")
-                i.fa.fa-sign-out.fa-fw
-                | Logout
+              a#sign-out(href="#")
+                i.fa.fa-sign-in.fa-fw
+                | Sign Out
+            li
+              a#login(href="#")
+                i.fa.fa-sign-in.fa-fw
+                | Login
           // /.dropdown-user
         // /.dropdown
       // /.navbar-top-links
@@ -159,3 +164,4 @@ template(name="navElement")
 template(name="page")
   // Put page title and breadcrumbs here with `Router.routes[Session.get('active')]`
   +yield
+

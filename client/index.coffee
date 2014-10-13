@@ -1,4 +1,9 @@
 Meteor.startup(() ->
+
+  Session.set('signUpErrorMessage', false)
+  Session.set('signUpSuccessMessage', false)
+  Session.set('loginErrorMessage', false)
+
   $(window).bind("load resize", () ->
     topOffset = 50
     width = (if (@window.innerWidth > 0) then @window.innerWidth else @screen.width)
@@ -15,6 +20,18 @@ Meteor.startup(() ->
       $("#page-wrapper").css("min-height", (height) + "px")
   )
 )
+
+Template.topbar.events({
+  'click #login': () ->
+    $('#loginModal').modal('show')
+
+  'click #sign-out': () ->
+    Meteor.logout((err) ->
+      if err?
+        # !TODO: I should add a section for dismissable and timeout notifications... or maybe Growl-style notifications
+        console.log(err)
+    )
+})
 
 Template.sidebar.rendered = () ->
   $('#side-menu').metisMenu()

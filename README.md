@@ -15,10 +15,12 @@ Features:
   * Only dependency is roughly 70 lines of JavaScript and 60 lines of CSS for metisMenu jQuery plugin. All of this code
     is included in this repository under plugins and loads correctly by Meteor.
   * Only other dependencies are few meteor packages. Run `meteor list` to duplicate.
+  * Wired into Meteor's account system for user creation, login, and logout.
 
 Not done (yet?)
 
-  * Meteor login support.
+  * Login for GitHub as an example for other login services.
+  * Storing other information in the user account.
   * Need to setup a demo server on meteor.com.
   * Tooltips. I think it's some missing CSS. Maybe the Bootstrap 3 package for Meteor is missing something? I would
     appreciate a pull request to fix this. It might just be the .popover classes?
