@@ -15,20 +15,19 @@ on the original see http://startbootstrap.com
   * CoffeeScript, Jade, and LESS (only slightly modified from the one provided by startbootstrap.com). The original is
     raw JavaScript and HTML.
   * Uses Iron Router (iron:router) for client-side routing.
-  * Left side navigation is dynamically generated and routing is automatically created from a single specificaiton
-    in routes.coffee. No `<ul>` and `<li>` tags. Just list the menu items. Second level menu is created by adding a
-    child menu item and specifying it's parent name. Simple.
+  * Left side navigation is dynamically generated and routing is automatically created from a simple specificaiton
+    in routes.coffee. No `<ul>` and `<li>` tags. Just list the menu items in JSON. Second level menu is created by
+    specifying the parent of menu item specification. Simple.
   * Redirects and missing routes supported.
   * Only dependency is roughly 70 lines of JavaScript and 60 lines of CSS for metisMenu jQuery plugin. All of this code
     is included in this repository under plugins and loads correctly by Meteor.
-  * Only other dependencies are few meteor packages. Run `meteor list` to duplicate.
+  * Only other dependencies are a few meteor packages. Run `meteor list` to duplicate.
   * Wired into Meteor's account system for user creation, login, and logout.
 
 ## Not done (yet?)
 
   * Login for GitHub as an example for other login services.
   * Storing other information in the user account.
-  * Need to setup a demo server on meteor.com.
   * Tooltips. I think it's some missing CSS. Maybe the Bootstrap 3 package for Meteor is missing something? I would
     appreciate a pull request to fix this. It might just be the .popover classes?
   * Need to templatize the topbar navigation.
