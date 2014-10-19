@@ -1,9 +1,16 @@
+
 # SB Admin 2 Meteor
+
+## Live demo
+
+http://sb-admin-2.meteor.com
+
+## Credits
 
 This template site was forked from the Start Bootstrap SB Admin 2 template and adapted for Meteor. For more information
 on the original see http://startbootstrap.com
 
-Features:
+## Features:
 
   * CoffeeScript, Jade, and LESS (only slightly modified from the one provided by startbootstrap.com). The original is
     raw JavaScript and HTML.
@@ -17,7 +24,7 @@ Features:
   * Only other dependencies are few meteor packages. Run `meteor list` to duplicate.
   * Wired into Meteor's account system for user creation, login, and logout.
 
-Not done (yet?)
+## Not done (yet?)
 
   * Login for GitHub as an example for other login services.
   * Storing other information in the user account.
