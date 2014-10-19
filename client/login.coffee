@@ -41,17 +41,21 @@ Template.signUp.events({
     return false
 })
 
-Template.signUp.errorMessage = () ->
-  return Session.get('signUpErrorMessage')
+Template.signUp.helpers(
+  errorMessage: () ->
+    return Session.get('signUpErrorMessage')
 
-Template.signUp.signUpSuccessMessage = () ->
-  return Session.get('signUpSuccessMessage')
+  signUpSuccessMessage: () ->
+    return Session.get('signUpSuccessMessage')
+)
 
-Template.loginForm.errorMessage = () ->
-  return Session.get('loginErrorMessage')
+Template.loginForm.helpers(
+  errorMessage: () ->
+    return Session.get('loginErrorMessage')
 
-Template.loginForm.currentUserMessage = () ->
-  if Meteor.user()
-    return 'Logged in as: ' + Meteor.user().emails[0].address
-  else
-    return false
+  currentUserMessage = () ->
+    if Meteor.user()
+      return 'Logged in as: ' + Meteor.user().emails[0].address
+    else
+      return false
+)

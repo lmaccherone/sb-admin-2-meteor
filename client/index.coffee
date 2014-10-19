@@ -21,7 +21,7 @@ Meteor.startup(() ->
   )
 )
 
-Template.topbar.events({
+Template.topbar.events(
   'click #login': () ->
     $('#loginModal').modal('show')
 
@@ -31,22 +31,28 @@ Template.topbar.events({
         # !TODO: I should add a section for dismissable and timeout notifications... or maybe Growl-style notifications
         console.log(err)
     )
-})
+)
+
+Template.sidebar.helpers(
+  navElements: () ->
+    return Session.get('navRoots')
+)
 
 Template.sidebar.rendered = () ->
   $('#side-menu').metisMenu()
 
-Template.sidebar.navElements = () ->
-  return Session.get('navRoots')
+Template.navElement.helpers(
+  isActive: () ->
+    if this.name is Session.get('active')
+      return "active"
+    else
+      return ""
+)
 
-Template.navElement.isActive = () ->
-  if this.name is Session.get('active')
-    return "active"
-  else
-    return ""
+Template.taskDropdownElement.helpers(
+  progressBarType: () ->
+    return "progress-bar-" + this.type
 
-Template.taskDropdownElement.progressBarType = () ->
-  return "progress-bar-" + this.type
-
-Template.taskDropdownElement.style = () ->
-  return "width: " + this.percentComplete + "%"
+  style: () ->
+    return "width: " + this.percentComplete + "%"
+)
