@@ -51,29 +51,20 @@ class NavRouteList
         @rootNavRoutes.push(route)
     @routes.push(route)
     @routeIndex[route.name] = route
-    if route.redirect?
-      @redirects.push({from: [route.path], to: route.redirect})
 
   getRoute: (name) ->
     return @routeIndex[name]
 
   setRouter: (layoutTemplate = DEFAULT_MAIN_LAYOUT, redirectTemplate = 'loading', notFoundTemplate = '404') ->
-    Router.configure({layoutTemplate})
+    Router.configure({layoutTemplate, notFoundTemplate})
     # set regular routes
     for r in @routes
-      Router.route(r.name, r)
-    # set catch all route
-    Router.route('not-found', {path: '/*', template: notFoundTemplate})
-    Router.onRun(@getOnRun(@redirects))
-
-  getOnRun: (redirects) ->
-    onRun = () ->
-      for r in redirects
-        if @path in r.from
-          Router.go(r.to)
-        else
-          Session.set('active', @route.name)
-    return onRun
+      if r.redirect?
+        Router.route(r.path, () ->
+          this.redirect(r.redirect);
+        )
+      else
+        Router.route(r.name, r)
 
 this.NavRoute = NavRoute
 this.NavRouteList = NavRouteList

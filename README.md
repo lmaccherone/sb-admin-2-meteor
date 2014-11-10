@@ -23,6 +23,8 @@ on the original see http://startbootstrap.com
     is included in this repository under plugins and loads correctly by Meteor.
   * Only other dependencies are a few meteor packages. Run `meteor list` to duplicate.
   * Wired into Meteor's account system for user creation, login, and logout.
+  * Two themes: a) light (like SB Admin 2), and b) dark (similar to SB Admin 1). However, both themes make better use
+    of LESS functionality (functions, variables, etc.) than the startbootstrap source.
 
 ## Not done (yet?)
 

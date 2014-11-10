@@ -4,6 +4,8 @@ Meteor.startup(() ->
   Session.set('signUpSuccessMessage', false)
   Session.set('loginErrorMessage', false)
 
+  new ResizeSensor()
+
   $(window).bind("load resize", () ->
     topOffset = 50
     width = (if (@window.innerWidth > 0) then @window.innerWidth else @screen.width)
