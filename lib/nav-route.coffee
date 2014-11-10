@@ -65,6 +65,9 @@ class NavRouteList
         )
       else
         Router.route(r.name, r)
+    Router.onAfterAction(() ->
+      Session.set('active', @route.getName())
+    )
 
 this.NavRoute = NavRoute
 this.NavRouteList = NavRouteList
