@@ -8,7 +8,7 @@ http://sb-admin-2.meteor.com
 ## Credits
 
 This template site was forked from the Start Bootstrap SB Admin 2 template and adapted for Meteor. For more information
-on the original see http://startbootstrap.com
+on the original see [Startbootstrap.com](http://startbootstrap.com/template-overviews/sb-admin-2/).
 
 ## Features:
 
