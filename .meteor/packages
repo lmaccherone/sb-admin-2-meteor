@@ -9,8 +9,8 @@ insecure
 iron:router
 less
 coffeescript
-linto:fontawesome
-mizzao:bootstrap-3
+fortawesome:fontawesome
+twbs:bootstrap
 mquandalle:jade
 accounts-github
 accounts-password
