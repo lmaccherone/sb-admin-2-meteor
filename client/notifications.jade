@@ -92,7 +92,7 @@ template(name="notifications")
       .col-lg-6
         .panel.panel-default
           .panel-heading
-            | Tooltips and Popovers (NOT WORKING - LM 2014-10-10)
+            | Tooltips and Popovers
           // /.panel-heading
           .panel-body
             h4 Tooltip Demo
@@ -117,4 +117,6 @@ template(name="notifications")
       // /.col-lg-6
     // /.row
   // /#page-wrapper
-
+  script.
+    $(function () {$('[data-toggle="tooltip"]').tooltip()})
+    $(function () {$('[data-toggle="popover"]').popover()})
